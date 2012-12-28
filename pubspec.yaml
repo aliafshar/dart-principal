@@ -1,0 +1,7 @@
+name:  principal
+description:  Permissions over resources.
+
+dependencies:
+#  js: any
+  unittest: any
+  signals: any
