@@ -1,7 +1,9 @@
-name:  principal
-description:  Permissions over resources.
+# Copyright (c) 2012, Google Inc
+
+name:         principal
+version:      0.1.0
+author:       Ali Afshar <afshar@google.com>
+description:  Permissions and identity for Dart.
 
 dependencies:
-#  js: any
   unittest: any
-  signals: any

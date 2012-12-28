@@ -1,7 +1,7 @@
 Principal
 =========
 
-Permissions and identity for Dart
+Permissions and identity for Dart.
 
 [![](https://drone.io/aliafshar/Principal/status.png)](https://drone.io/aliafshar/Principal/latest)
 
