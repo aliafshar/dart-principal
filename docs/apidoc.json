@@ -1,0 +1,478 @@
+
+[
+  {
+    "kind": "library",
+    "name": "principal",
+    "children": [
+      {
+        "superclass": {
+          "name": "Principled",
+          "refId": "Principled"
+        },
+        "kind": "class",
+        "comment": "\nAn identity providing a number of requirements.\n\n",
+        "name": "Identity",
+        "children": [
+          {
+            "returnType": {
+              "name": "Set",
+              "refId": "Set"
+            },
+            "kind": "method",
+            "name": "provides",
+            "id": "provides0()"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "method",
+            "comment": "\nCreates a new identity for the given optional key.\n\n",
+            "name": "Identity",
+            "children": [
+              {
+                "ref": {
+                  "name": "String",
+                  "refId": "String"
+                },
+                "isOptional": true,
+                "kind": "param",
+                "name": "key",
+                "id": "key"
+              }
+            ],
+            "id": "Identity1()"
+          },
+          {
+            "returnType": {
+              "name": "bool",
+              "refId": "bool"
+            },
+            "kind": "method",
+            "comment": "\nReturns whether this identity has permission.\n\n",
+            "name": "can",
+            "children": [
+              {
+                "ref": {
+                  "name": "Permission",
+                  "refId": "Permission"
+                },
+                "kind": "param",
+                "name": "permission",
+                "id": "permission"
+              }
+            ],
+            "id": "can1()"
+          },
+          {
+            "ref": {
+              "name": "Set",
+              "refId": "Set"
+            },
+            "kind": "property",
+            "name": "provides",
+            "id": "provides"
+          },
+          {
+            "ref": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "property",
+            "name": "user",
+            "id": "user"
+          },
+          {
+            "ref": {
+              "name": "String",
+              "refId": "String"
+            },
+            "kind": "property",
+            "name": "key",
+            "id": "key"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "constructor",
+            "comment": "\nCreates a new identity for the given optional key.\n\n",
+            "name": "Identity",
+            "children": [
+              {
+                "ref": {
+                  "name": "String",
+                  "refId": "String"
+                },
+                "isOptional": true,
+                "kind": "param",
+                "name": "key",
+                "id": "key"
+              }
+            ],
+            "id": "Identity1()"
+          }
+        ],
+        "id": "Identity"
+      },
+      {
+        "superclass": {
+          "name": "Principled",
+          "refId": "Principled"
+        },
+        "kind": "class",
+        "comment": "\nA permission containing a number of requirements.\n\n",
+        "name": "Permission",
+        "children": [
+          {
+            "returnType": {
+              "name": "Set",
+              "refId": "Set"
+            },
+            "kind": "method",
+            "name": "needs",
+            "id": "needs0()"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "method",
+            "comment": "\nCreates a new Permission for a single requirement value.\n\n",
+            "name": "Permission",
+            "children": [
+              {
+                "ref": {
+                  "name": "dynamic",
+                  "refId": "dynamic"
+                },
+                "kind": "param",
+                "name": "value",
+                "id": "value"
+              }
+            ],
+            "id": "Permission1()"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "method",
+            "comment": "\nCreates a new permission for the given list of requirement values.\n\n",
+            "name": "Permission.s",
+            "children": [
+              {
+                "ref": {
+                  "name": "List",
+                  "refId": "List",
+                  "arguments": [
+                    {
+                      "name": "dynamic",
+                      "refId": "dynamic"
+                    }
+                  ]
+                },
+                "kind": "param",
+                "name": "values",
+                "id": "values"
+              }
+            ],
+            "id": "Permission.s1()"
+          },
+          {
+            "returnType": {
+              "name": "bool",
+              "refId": "bool"
+            },
+            "kind": "method",
+            "comment": "\nReturns whether this permission can be accessed by the identity.\n\n",
+            "name": "allows",
+            "children": [
+              {
+                "ref": {
+                  "name": "Identity",
+                  "refId": "Identity"
+                },
+                "kind": "param",
+                "name": "identity",
+                "id": "identity"
+              }
+            ],
+            "id": "allows1()"
+          },
+          {
+            "ref": {
+              "name": "Set",
+              "refId": "Set"
+            },
+            "kind": "property",
+            "name": "needs",
+            "id": "needs"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "constructor",
+            "comment": "\nCreates a new Permission for a single requirement value.\n\n",
+            "name": "Permission",
+            "children": [
+              {
+                "ref": {
+                  "name": "dynamic",
+                  "refId": "dynamic"
+                },
+                "kind": "param",
+                "name": "value",
+                "id": "value"
+              }
+            ],
+            "id": "Permission1()"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "constructor",
+            "comment": "\nCreates a new permission for the given list of requirement values.\n\n",
+            "name": "Permission.s",
+            "children": [
+              {
+                "ref": {
+                  "name": "List",
+                  "refId": "List",
+                  "arguments": [
+                    {
+                      "name": "dynamic",
+                      "refId": "dynamic"
+                    }
+                  ]
+                },
+                "kind": "param",
+                "name": "values",
+                "id": "values"
+              }
+            ],
+            "id": "Permission.s1()"
+          }
+        ],
+        "id": "Permission"
+      },
+      {
+        "superclass": {
+          "name": "Object",
+          "refId": "Object"
+        },
+        "kind": "class",
+        "comment": "\nThe base class for things requiring or providing requirements.\n\n",
+        "name": "Principled",
+        "children": [
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "method",
+            "comment": "\nAdds a requirement value to this principled.\n\n",
+            "name": "add",
+            "children": [
+              {
+                "ref": {
+                  "name": "dynamic",
+                  "refId": "dynamic"
+                },
+                "kind": "param",
+                "name": "value",
+                "id": "value"
+              }
+            ],
+            "id": "add1()"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "method",
+            "comment": "\nAdds many requirement values to this principled.\n\n",
+            "name": "addMany",
+            "children": [
+              {
+                "ref": {
+                  "name": "List",
+                  "refId": "List",
+                  "arguments": [
+                    {
+                      "name": "dynamic",
+                      "refId": "dynamic"
+                    }
+                  ]
+                },
+                "kind": "param",
+                "name": "values",
+                "id": "values"
+              }
+            ],
+            "id": "addMany1()"
+          },
+          {
+            "returnType": {
+              "name": "bool",
+              "refId": "bool"
+            },
+            "kind": "method",
+            "comment": "\nReturns whether the other principled is contained by this one.\n\n",
+            "name": "contains",
+            "children": [
+              {
+                "ref": {
+                  "name": "Principled",
+                  "refId": "Principled"
+                },
+                "kind": "param",
+                "name": "other",
+                "id": "other"
+              }
+            ],
+            "id": "contains1()"
+          },
+          {
+            "ref": {
+              "name": "Set",
+              "refId": "Set"
+            },
+            "kind": "property",
+            "name": "reqs",
+            "id": "reqs"
+          }
+        ],
+        "id": "Principled"
+      },
+      {
+        "superclass": {
+          "name": "Object",
+          "refId": "Object"
+        },
+        "kind": "class",
+        "comment": "\nA single requirement that can be required or provided.\n\n",
+        "name": "Requirement",
+        "children": [
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "method",
+            "comment": "\nCreates a new requirement from the given value.\n\n",
+            "name": "Requirement",
+            "children": [
+              {
+                "ref": {
+                  "name": "T",
+                  "refId": "T"
+                },
+                "kind": "param",
+                "name": "value",
+                "id": "value"
+              }
+            ],
+            "id": "Requirement1()"
+          },
+          {
+            "isOperator": true,
+            "returnType": {
+              "name": "bool",
+              "refId": "bool"
+            },
+            "kind": "method",
+            "comment": "\nReturns whether this requirement value is equal to the other.\n\n",
+            "name": "==",
+            "children": [
+              {
+                "ref": {
+                  "name": "Requirement",
+                  "refId": "Requirement",
+                  "arguments": [
+                    {
+                      "name": "T",
+                      "refId": "T"
+                    }
+                  ]
+                },
+                "kind": "param",
+                "name": "other",
+                "id": "other"
+              }
+            ],
+            "id": "==1()"
+          },
+          {
+            "returnType": {
+              "name": "int",
+              "refId": "int"
+            },
+            "kind": "method",
+            "name": "hashCode",
+            "id": "hashCode0()"
+          },
+          {
+            "returnType": {
+              "name": "String",
+              "refId": "String"
+            },
+            "kind": "method",
+            "name": "toString",
+            "id": "toString0()"
+          },
+          {
+            "ref": {
+              "name": "int",
+              "refId": "int"
+            },
+            "kind": "property",
+            "name": "hashCode",
+            "id": "hashCode"
+          },
+          {
+            "ref": {
+              "name": "T",
+              "refId": "T"
+            },
+            "kind": "property",
+            "name": "value",
+            "id": "value"
+          },
+          {
+            "returnType": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "constructor",
+            "comment": "\nCreates a new requirement from the given value.\n\n",
+            "name": "Requirement",
+            "children": [
+              {
+                "ref": {
+                  "name": "T",
+                  "refId": "T"
+                },
+                "kind": "param",
+                "name": "value",
+                "id": "value"
+              }
+            ],
+            "id": "Requirement1()"
+          }
+        ],
+        "id": "Requirement"
+      }
+    ],
+    "id": "file:///usr/local/google/home/afshar/src/arzio/google3/dart-principal/lib/principal.dart"
+  }
+]
