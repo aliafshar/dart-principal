@@ -1,0 +1,152 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Requirement&lt;T&gt; class / principal Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="principal" data-type="Requirement&amp;lt;T&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../principal.html">principal</a> &rsaquo; <a href="../principal/Requirement.html">Requirement&lt;T&gt;</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>Requirement&lt;T&gt;</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A single requirement that can be required or provided.</p>
+<pre class="source">
+class Requirement&lt;T&gt; {
+
+ /**
+  * The value of this requirement. Can be anything.
+  */
+ final T value;
+
+ /**
+  * Creates a new requirement from the given value.
+  */
+ Requirement(this.value);
+
+ /**
+  * Returns whether this requirement value is equal to the other.
+  */
+ bool operator ==(Requirement&lt;T&gt; other) =&gt; value == other.value;
+
+ int get hashCode =&gt; value.hashCode;
+
+ String toString() =&gt; 'Requirement&lt;$value&gt;';
+
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Requirement">
+<button class="show-code">Code</button>
+new <strong>Requirement</strong>(<a href="../principal/Requirement.html">T</a> value) <a class="anchor-link" href="#Requirement"
+              title="Permalink to Requirement&lt;T&gt;.Requirement">#</a></h4>
+<div class="doc">
+<p>Creates a new requirement from the given value.</p>
+<pre class="source">
+Requirement(this.value);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="hashCode">
+<button class="show-code">Code</button>
+final int         <strong>hashCode</strong> <a class="anchor-link"
+            href="#hashCode"
+            title="Permalink to Requirement&lt;T&gt;.hashCode">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Get a hash code for this object.</p>
+<p>All objects have hash codes. Hash codes are guaranteed to be the
+same for objects that are equal when compared using the equality
+operator <code>==</code>. Other than that there are no guarantees about
+the hash codes. They will not be consistent between runs and
+there are no distribution guarantees.</p>
+<p>If a subclass overrides <a class="crossref" href="../principal/Requirement.html#hashCode">hashCode</a> it should override the
+equality operator as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from Object </div></div>
+<pre class="source">
+int get hashCode =&gt; value.hashCode;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="value">
+<button class="show-code">Code</button>
+final <a href="../principal/Requirement.html">T</a>         <strong>value</strong> <a class="anchor-link"
+            href="#value"
+            title="Permalink to Requirement&lt;T&gt;.value">#</a>
+        </h4>
+        <div class="doc">
+<p>The value of this requirement. Can be anything.</p>
+<pre class="source">
+final T value;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="==">
+<button class="show-code">Code</button>
+bool <strong>operator ==</strong>(<a href="../principal/Requirement.html">Requirement</a>&lt;<a href="../principal/Requirement.html">T</a>&gt; other) <a class="anchor-link" href="#=="
+              title="Permalink to Requirement&lt;T&gt;.operator ==">#</a></h4>
+<div class="doc">
+<p>Returns whether this requirement value is equal to the other.</p>
+<pre class="source">
+bool operator ==(Requirement&lt;T&gt; other) =&gt; value == other.value;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="toString">
+<button class="show-code">Code</button>
+String <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Requirement&lt;T&gt;.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from Object </div></div>
+<pre class="source">
+String toString() =&gt; 'Requirement&lt;$value&gt;';
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer">
+          <div>This page was generated at 2012-12-28 13:37:31.670</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        

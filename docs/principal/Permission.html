@@ -1,0 +1,179 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Permission class / principal Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="principal" data-type="Permission">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../principal.html">principal</a> &rsaquo; <a href="../principal/Permission.html">Permission</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>Permission</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A permission containing a number of requirements.</p>
+<pre class="source">
+class Permission extends Principled {
+
+ // Shortcut to requirements.
+ Set get needs =&gt; reqs;
+
+ /**
+  * Creates a new Permission for a single requirement value.
+  */
+ Permission(dynamic value) {
+   add(value);
+ }
+
+ /**
+  * Creates a new permission for the given list of requirement values.
+  */
+ Permission.s(List&lt;dynamic&gt; values) {
+   addMany(values);
+ }
+
+ /**
+  * Returns whether this permission can be accessed by the identity.
+  */
+ bool allows(Identity identity) =&gt; identity.contains(this);
+
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../principal/Principled.html">Principled</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>Permission</strong></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Permission">
+<button class="show-code">Code</button>
+new <strong>Permission</strong>(value) <a class="anchor-link" href="#Permission"
+              title="Permalink to Permission.Permission">#</a></h4>
+<div class="doc">
+<p>Creates a new Permission for a single requirement value.</p>
+<pre class="source">
+Permission(dynamic value) {
+ add(value);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Permission.s">
+<button class="show-code">Code</button>
+new <strong>Permission.s</strong>(List&lt;Dynamic&gt; values) <a class="anchor-link" href="#Permission.s"
+              title="Permalink to Permission.Permission.s">#</a></h4>
+<div class="doc">
+<p>Creates a new permission for the given list of requirement values.</p>
+<pre class="source">
+Permission.s(List&lt;dynamic&gt; values) {
+ addMany(values);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="needs">
+<button class="show-code">Code</button>
+final Set         <strong>needs</strong> <a class="anchor-link"
+            href="#needs"
+            title="Permalink to Permission.needs">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+Set get needs =&gt; reqs;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="reqs">
+<button class="show-code">Code</button>
+final Set         <strong>reqs</strong> <a class="anchor-link"
+            href="#reqs"
+            title="Permalink to Permission.reqs">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../principal/Principled.html">Principled</a> </div><div class="doc">
+<pre class="source">
+final Set reqs = new Set();
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="add">
+<button class="show-code">Code</button>
+<strong>add</strong>(value) <a class="anchor-link" href="#add"
+              title="Permalink to Permission.add">#</a></h4>
+<div class="inherited-from">inherited from <a href="../principal/Principled.html">Principled</a> </div><div class="doc">
+<p>Adds a requirement value to this principled.</p>
+<pre class="source">
+add(dynamic value) =&gt; reqs.add(new Requirement(value));
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="addMany">
+<button class="show-code">Code</button>
+<strong>addMany</strong>(List&lt;Dynamic&gt; values) <a class="anchor-link" href="#addMany"
+              title="Permalink to Permission.addMany">#</a></h4>
+<div class="inherited-from">inherited from <a href="../principal/Principled.html">Principled</a> </div><div class="doc">
+<p>Adds many requirement values to this principled.</p>
+<pre class="source">
+addMany(List&lt;dynamic&gt; values) =&gt; values.forEach(add);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="allows">
+<button class="show-code">Code</button>
+bool <strong>allows</strong>(<a href="../principal/Identity.html">Identity</a> identity) <a class="anchor-link" href="#allows"
+              title="Permalink to Permission.allows">#</a></h4>
+<div class="doc">
+<p>Returns whether this permission can be accessed by the identity.</p>
+<pre class="source">
+bool allows(Identity identity) =&gt; identity.contains(this);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="contains">
+<button class="show-code">Code</button>
+bool <strong>contains</strong>(<a href="../principal/Principled.html">Principled</a> other) <a class="anchor-link" href="#contains"
+              title="Permalink to Permission.contains">#</a></h4>
+<div class="inherited-from">inherited from <a href="../principal/Principled.html">Principled</a> </div><div class="doc">
+<p>Returns whether the other principled is contained by this one.</p>
+<pre class="source">
+bool contains(Principled other) =&gt; reqs.containsAll(other.reqs);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer">
+          <div>This page was generated at 2012-12-28 13:37:31.661</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        

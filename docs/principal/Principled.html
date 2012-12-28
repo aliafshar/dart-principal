@@ -1,0 +1,123 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Principled class / principal Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="principal" data-type="Principled">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../principal.html">principal</a> &rsaquo; <a href="../principal/Principled.html">Principled</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>Principled</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The base class for things requiring or providing requirements.</p>
+<pre class="source">
+class Principled {
+
+ // Requirements provided or required by this principled.
+ final Set reqs = new Set();
+
+ /**
+  * Adds a requirement value to this principled.
+  */
+ add(dynamic value) =&gt; reqs.add(new Requirement(value));
+
+ /**
+  * Adds many requirement values to this principled.
+  */
+ addMany(List&lt;dynamic&gt; values) =&gt; values.forEach(add);
+
+ /**
+  * Returns whether the other principled is contained by this one.
+  */
+ bool contains(Principled other) =&gt; reqs.containsAll(other.reqs);
+
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../principal/Identity.html">Identity</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../principal/Permission.html">Permission</a></span></p>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="reqs">
+<button class="show-code">Code</button>
+final Set         <strong>reqs</strong> <a class="anchor-link"
+            href="#reqs"
+            title="Permalink to Principled.reqs">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final Set reqs = new Set();
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+<button class="show-code">Code</button>
+<strong>add</strong>(value) <a class="anchor-link" href="#add"
+              title="Permalink to Principled.add">#</a></h4>
+<div class="doc">
+<p>Adds a requirement value to this principled.</p>
+<pre class="source">
+add(dynamic value) =&gt; reqs.add(new Requirement(value));
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="addMany">
+<button class="show-code">Code</button>
+<strong>addMany</strong>(List&lt;Dynamic&gt; values) <a class="anchor-link" href="#addMany"
+              title="Permalink to Principled.addMany">#</a></h4>
+<div class="doc">
+<p>Adds many requirement values to this principled.</p>
+<pre class="source">
+addMany(List&lt;dynamic&gt; values) =&gt; values.forEach(add);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="contains">
+<button class="show-code">Code</button>
+bool <strong>contains</strong>(<a href="../principal/Principled.html">Principled</a> other) <a class="anchor-link" href="#contains"
+              title="Permalink to Principled.contains">#</a></h4>
+<div class="doc">
+<p>Returns whether the other principled is contained by this one.</p>
+<pre class="source">
+bool contains(Principled other) =&gt; reqs.containsAll(other.reqs);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer">
+          <div>This page was generated at 2012-12-28 13:37:31.663</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        
