@@ -1,9 +1,10 @@
 # Copyright (c) 2012, Google Inc
 
 name:         principal
-version:      0.1.0
+version:      0.2.0
 author:       Ali Afshar <afshar@google.com>
 description:  Permissions and identity for Dart.
+homepage:     https://github.com/aliafshar/dart-principal
 
 dependencies:
   unittest: any
